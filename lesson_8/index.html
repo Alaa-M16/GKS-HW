@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="bookingForm">
+        <h2>Бронирование отеля</h2>
+
+        <label for="checkin">Дата заезда</label>
+        <input type="date" id="checkin" name="checkin" required />
+        <span class="error-message" id="checkin-error"></span>
+
+        <label for="checkout">Дата выезда</label>
+        <input type="date" id="checkout" name="checkout" required />
+        <span class="error-message" id="checkout-error"></span>
+
+        <label for="rooms">Количество комнат</label>
+        <input
+          type="number"
+          id="rooms"
+          name="rooms"
+          min="1"
+          max="5"
+          value="1"
+          required
+        />
+        <span class="error-message" id="rooms-error"></span>
+
+        <button type="submit">Подтвердить бронь</button>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
